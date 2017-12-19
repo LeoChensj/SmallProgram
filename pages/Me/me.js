@@ -145,6 +145,14 @@ Page({
       url: '../picker/picker'
     })
 
+  },
+
+  toShare: function () {
+
+    wx: wx.navigateTo({
+      url: '../share/share'
+    })
+
   }
 
 

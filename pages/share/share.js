@@ -1,22 +1,22 @@
-var app = getApp();
-
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    shareTicket: 'shareTicket'
+    
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var shareTicket = app.globalData.shareTicket;
-    
-    this.setData({
-      shareTicket: shareTicket
+
+    /*
+    重要
+    */
+    wx.showShareMenu({
+      withShareTicket: true
     });
 
   },
@@ -66,7 +66,41 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-    
-  }
+  onShareAppMessage: function (options) {
+    // if (options.from === 'button') {
+    //   // 来自页面内转发按钮
+    //   //console.log(options.target)
+    //   console.log('来自页面内转发按钮');
+    // }
+
+    return {
+      title: "转发标题",
+      path: "pages/Bition/bition",
+      success: function (res){
+
+        var shareTicket = res.shareTickets[0];
+        console.log("转发成功-shareTicket:", shareTicket);
+
+        wx.getShareInfo({
+          shareTicket: shareTicket,
+          success: function(ress) {
+            console.log("获取转发信息成功");
+            console.log(ress);
+          }
+        });
+      }
+    };
+
+  },
+
+
+
+
+
+
+
+
+
+
+
 })

@@ -14,7 +14,8 @@
     "pages/button/button",
     "pages/checkbox/checkbox",
     "pages/input/input",
-    "pages/picker/picker"
+    "pages/picker/picker",
+    "pages/share/share"
   ],
 
   "window":{

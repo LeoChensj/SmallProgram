@@ -16,4 +16,4 @@
 
 
 <!--for  -->
-<view wx:for="{{arr}}">项目[{{index}}]={{item}}</view>
+<view wx:for="{{arr}}" wx:key="asd">项目[{{index}}]={{item}}</view>
