@@ -15,7 +15,8 @@
     "pages/checkbox/checkbox",
     "pages/input/input",
     "pages/picker/picker",
-    "pages/share/share"
+    "pages/share/share",
+    "pages/flex/flex"
   ],
 
   "window":{

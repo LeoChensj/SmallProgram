@@ -153,6 +153,14 @@ Page({
       url: '../share/share'
     })
 
+  },
+
+  toFlex: function () {
+
+    wx: wx.navigateTo({
+      url: '../flex/flex'
+    })
+
   }
 
 

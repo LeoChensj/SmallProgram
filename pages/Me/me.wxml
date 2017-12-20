@@ -9,3 +9,4 @@
 <button bindtap='toInput'>input</button>
 <button bindtap='toPicker'>picker</button>
 <button bindtap='toShare'>share</button>
+<button bindtap='toFlex'>flex</button>
